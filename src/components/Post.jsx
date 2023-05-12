@@ -1,5 +1,6 @@
 import { Comment } from './Comment';
-import styles from './Post.module.css'
+import { Avatar } from './Avatar';
+import styles from './Post.module.css';
 
 export function Post () {
     return (
@@ -7,10 +8,7 @@ export function Post () {
             <header>
                 <div className={styles.author}>
 
-                    <img 
-                        className={styles.avatar} 
-                        src="https://images.unsplash.com/photo-1465153690352-10c1b29577f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80" 
-                    />
+                    <Avatar src="https://images.unsplash.com/photo-1465153690352-10c1b29577f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80" />
                     
                     <div className={styles.authorInfo}>
                         <strong>George Boole</strong>
