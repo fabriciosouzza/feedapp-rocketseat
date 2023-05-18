@@ -17,7 +17,7 @@ const posts = [
     content: [ 
       {type: 'paragraph', content: 'Criador da álgebra booleana, fundamental para o desenvolvimento da computação moderna.'},
       {type: 'paragraph', content: 'O trabalho de Whitehead e Russell em Principia Mathematica (1910-1913) foi o primeiro a convencer um grupo de matemáticos que a lógica simbólica devia receber sua séria atenção.'},
-      {type: 'link', content: '<a href="https://pt.wikipedia.org/wiki/George_Boole" target= "_blank">👉 Para mais informações</a>'}
+      {type: 'link', content: '👉 Para mais informações', taghref: 'https://pt.wikipedia.org/wiki/George_Boole', tagtarget: '_blank'}
     ],
     publishedAt: new Date('2023-05-04 10:32:07')
   },
@@ -30,7 +30,7 @@ const posts = [
     },
     content: [ 
       {type: 'paragraph', content: 'Charles Babbage é mais conhecido e, de certa forma, referenciado como o inventor que projetou o primeiro computador de uso geral, utilizando apenas partes mecânicas, a máquina analítica.'},
-      {type: 'link', content: '<a href="#">👉 jane.design/doctorcare</a>'}
+      {type: 'link', content: '👉 Para mais informações', taghref: 'https://pt.wikipedia.org/wiki/Charles_Babbage', tagtarget: '_blank'}
     ],
     publishedAt: new Date('2023-05-05 22:43:15')
   }
