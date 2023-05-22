@@ -23,6 +23,7 @@ export function Post (props) {
 
     function handleNewCommentChange() {
         setNewCommentText(event.target.value);
+        event.target.setCustomValidity('')
     }
 
     function deleteComment(commentToDelete) {
@@ -32,6 +33,11 @@ export function Post (props) {
         setComments(commentsWithoutDeletedOne);
     }
 
+    function handleNewCommentInvalid() {
+        event.target.setCustomValidity('Campo necessário')   
+    }
+
+    const isNewCommentEmpty = newCommentText.length == 0
     return (
         <article className={styles.post}>
             <header>
@@ -64,10 +70,19 @@ export function Post (props) {
 
             <form onSubmit={handleCreatNewComment} className={styles.commentForm}>
                 <strong>Deixe o seu feedback</strong>
-                <textarea name ='comment' placeholder='Deixe um comentário' onChange={handleNewCommentChange} value={newCommentText}/>
+                <textarea 
+                    name ='comment' 
+                    placeholder='Deixe um comentário' 
+                    onChange={handleNewCommentChange} 
+                    value={newCommentText} 
+                    required
+                    onInvalid={handleNewCommentInvalid} 
+                />
 
                 <footer>
-                <button type='submit'>Publicar</button>
+                <button type='submit' disabled={isNewCommentEmpty}>
+                        Publicar
+                </button>
                 </footer>
             </form>
 
